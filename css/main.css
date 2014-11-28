@@ -1,0 +1,204 @@
+
+/****************************************************
+						Main Styles CSS
+****************************************************/
+body{height:100%;margin:0 auto;background-color:#fff;}
+
+.clear {clear:both;}
+
+.wrap {background-color: white; z-index: 1;
+margin-top:0px;}
+
+@font-face {
+	font-family: jaapokki;
+	src: url('../font/jaapokki-regular.ttf');
+}
+
+
+/****************************************************
+						Navigation
+****************************************************/
+		.fixedheader{
+			margin-top:0px;
+			z-index:1;
+			position: fixed; 
+			background-color: #fff; 
+			width: 100%;
+			height:130px;
+			border-bottom: 2px solid #666
+		}
+		
+		
+		/****************************************
+						MAIN PAGE
+		****************************************/
+		.logo{
+			background-image:url(../img/logo.png);
+			display:block;
+			background-repeat: no-repeat; 
+			-webkit-background-size: cover; 
+			background-position: center center;
+			background-size: cover;	
+			width:180px;
+			height:100px;
+			position:absolute;
+			top:10px;left:39%;
+			text-align: center;
+		}
+			.logo:hover{
+				cursor:pointer;
+			}
+		.background-img{
+			margin-top:120px;
+			width:100%;
+			height:105%;
+			background-image: url(../img/workspace.png);
+			background-repeat: no-repeat; 
+			-webkit-background-size: cover; 
+			background-position: center center;
+			background-size: cover; 
+			background-position: center center;
+		  	position:relative;
+			
+		}
+		.overlay{
+			margin-top:134px;
+			position: absolute;
+			top: 0px;
+			left: 0;
+			width: 100%;
+			height: 104%;
+			z-index: 0;
+			background-color: rgba(0,0,0,0.2); /*dim the background*/
+		}
+		/****************************************
+						WORK PAGE
+		****************************************/
+		.work-icon{
+			font-size:20px;
+			font-family:jaapokki;
+			display:block;
+			position:absolute;
+			top:25px;
+			right:30px;
+		}
+			.work-icon:hover{
+				color:#00baff;
+				cursor:pointer;
+			}
+		.flyout {
+		position: absolute;
+		right: 100%;
+		}
+		.navWidth {
+			left:0%;
+			width:100%;
+		}
+		.work-wrap{
+			background-color: #666;
+			margin: 0;
+			width: 100%;
+			height:100%;
+			display:block;
+			padding:0px;
+			position:fixed;
+			top:0px;
+			right:0px;
+			z-index:-1;
+		}
+		.work-head{
+			background-color: #000;
+			width:100%;
+			height:250px;
+			margin-top: 125px;
+		}
+		.work-quote {
+			width:80%;
+			float left;
+			position:relative;
+			top:100px;left:25px;
+		}
+		.work-quote h3 {
+			color:#fff;
+
+		}
+		.work-gallery{
+			width:100%;
+		}
+		.common{
+			float: left;
+			width:33.3%;
+			height:300px;
+			background-repeat: no-repeat; 
+			-webkit-background-size: cover; 
+			background-position: center center;
+			background-size: cover; 
+			background-position: center center;
+		}
+		.common:hover{opacity: 0.5;background-color: #0076a3;}
+			.gallery-img-1{background-image: url(../img/shop_featured_big.png);}
+			.gallery-img-2{background-image: url(../img/samsung-business-logo.png);}
+			.gallery-img-3{background-image: url(../img/shop_featured_big.png);}
+		
+
+		/****************************************
+						WORK PAGE
+		****************************************/
+		.info-icon{
+			font-size:20px;
+			font-family:jaapokki;
+			display:block;
+			position:absolute;
+			top:25px;
+			left:30px;
+		}
+			.info-icon:hover{
+				color:#00baff;
+				cursor:pointer;
+			}
+		.flyout {
+		position: absolute;
+		right: 100%;
+		}
+		.navWidth {
+			left:0%;
+			width:100%;
+		}
+		.info-wrap{
+			background-color: #000;
+			margin: 0;
+			width: 100%;
+			height:100%;
+			display:block;
+			padding:0px;
+			position:fixed;
+			top:0px;
+			right:0px;
+			z-index:-2;
+		}
+		
+		.info-wrap h3{
+			padding-left:20px;
+		}
+		.info-wrap p{
+			padding-right:20px;
+		}
+		.info-head{
+			color:#fff;
+			background-color: orange;
+			width:100%;
+			height:250px;
+			margin-top: 125px;
+		}
+		.info-section-social{
+			color:#fff;
+			background-color: black;
+			width:100%;
+			height:400px;
+		}
+		.info-section-resume{
+			color:#000;
+			background-color: white;
+			width:100%;
+			height:400px;
+		}
