@@ -1,21 +1,25 @@
 /**************************************************** 
 					Page Flyouts
 ****************************************************/
+
 $(function() {
-	$('.work-icon').on('click', function() {
-		$('.wrap').addClass('flyout');
+  $('.work-icon').on('click', function() {
+    $('.wrap').toggleClass('flyout');
     $('.work-wrap').toggleClass("active");
   });
 });
+
 
 $(function() {
   $('.logo').on('click', function() {
     $('.wrap').removeClass('flyout');
   });
 });
+
+
 $(function() {
   $('.info-icon').on('click', function() {
-    $('.wrap').addClass('flyout');
+    $('.wrap').toggleClass('flyout');
     $('.info-wrap').toggleClass("active");
   });
 });
