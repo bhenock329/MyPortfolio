@@ -6,117 +6,121 @@ body{height:100%;margin:0 auto;background-color:#fff;}
 
 .clear {clear:both;}
 
-.wrap {background-color: white; z-index: 1;
-margin-top:0px;}
-
 @font-face {
 	font-family: jaapokki;
 	src: url('../font/jaapokki-regular.ttf');
 }
 
-
 /****************************************************
 						Navigation
 ****************************************************/
+
 		.fixedheader{
 			margin-top:0px;
-			z-index:1;
+			z-index:10;
 			position: fixed; 
 			background-color: #fff; 
 			width: 100%;
 			height:130px;
 			border-bottom: 2px solid #666
 		}
-		
-		
+		.navbutton{text-align: center;
+			margin:0 auto;
+		}
+			.logo{
+				background-image:url(../img/logo.png);
+				display:block;
+				background-repeat: no-repeat; 
+				-webkit-background-size: cover; 
+				background-position: center center;
+				background-size: cover;	
+				width:180px;
+				height:100px;
+			}
+				.logo:hover{
+					cursor:pointer;
+				}
+
 		/****************************************
 						MAIN PAGE
 		****************************************/
-		.logo{
-			background-image:url(../img/logo.png);
-			display:block;
-			background-repeat: no-repeat; 
-			-webkit-background-size: cover; 
-			background-position: center center;
-			background-size: cover;	
-			width:180px;
-			height:100px;
-			position:absolute;
-			top:10px;left:39%;
-			text-align: center;
-		}
-			.logo:hover{
-				cursor:pointer;
-			}
-		.background-img{
-			margin-top:120px;
+		.flyin-main {}
+		.main-wrap {
 			width:100%;
-			height:105%;
+			height:100%;
+			margin:0;
+			padding:0;
+			z-index: -1;
+		}
+
+		.background-img{
+			margin-top:115px;
+			width:100%;
+			height:100%;
 			background-image: url(../img/workspace.png);
 			background-repeat: no-repeat; 
 			-webkit-background-size: cover; 
 			background-position: center center;
 			background-size: cover; 
 			background-position: center center;
-		  	position:relative;
-			
+
 		}
 		.overlay{
-			margin-top:134px;
+			margin-top:124px;
 			position: absolute;
-			top: 0px;
+			top: 0;
 			left: 0;
 			width: 100%;
-			height: 104%;
+			height: 100%;
 			z-index: 0;
 			background-color: rgba(0,0,0,0.2); /*dim the background*/
 		}
+
 		/****************************************
 						WORK PAGE
 		****************************************/
-		.work-icon{
-			font-size:20px;
+		.work-icon{margin-top:10px;
+			font-size:60px;
 			font-family:jaapokki;
 			display:block;
-			position:absolute;
-			top:25px;
-			right:30px;
+			z-index: 11;
 		}
 			.work-icon:hover{
 				color:#00baff;
 				cursor:pointer;
 			}
-		.flyout {
-		position: absolute;
-		right: 100%;
-		}
-		.navWidth {
-			left:0%;
-			width:100%;
-		}
+			.mobile-work-icon{
+				display:none;
+			}
+
+		.work-wrap.active{z-index:2;top:0;left:0;}
+		.work-wrap.work-active-over-info{z-index:3;top:0;left:0;}
 		.work-wrap{
-			background-color: #666;
+			background-color: black;
 			margin: 0;
+			margin-top:130px;
 			width: 100%;
 			height:100%;
 			display:block;
 			padding:0px;
-			position:fixed;
 			top:0px;
 			right:0px;
-			z-index:-1;
+			z-index:0;
+			position:absolute;
+			top:-9999;right:9999;
 		}
 		.work-head{
 			background-color: #000;
 			width:100%;
-			height:225px;
-			margin-top: 130px;
+			height:100px;
+			margin-top: 135px;
+			margin-right: 0px;
 		}
 		.work-quote {
 			width:80%;
 			float left;
-			position:relative;
-			top:100px;left:25px;
+			padding:0 25 25 25;
+			
 		}
 		.work-quote h3 {
 			color:#fff;
@@ -128,7 +132,9 @@ margin-top:0px;}
 		.common{
 			float: left;
 			width:33.3%;
-			height:150px;
+			height:300px;
+			margin: 0;
+			padding:0;
 			background-repeat: no-repeat; 
 			-webkit-background-size: cover; 
 			background-position: center center;
@@ -145,25 +151,21 @@ margin-top:0px;}
 						WORK PAGE
 		****************************************/
 		.info-icon{
-			font-size:20px;
+			margin-top:10px;
+			font-size:60px;
 			font-family:jaapokki;
 			display:block;
-			position:absolute;
-			top:25px;
-			left:30px;
+			z-index: 11;
 		}
 			.info-icon:hover{
 				color:#00baff;
 				cursor:pointer;
 			}
-		.flyout {
-		position: absolute;
-		right: 100%;
-		}
-		.navWidth {
-			left:0%;
-			width:100%;
-		}
+			.mobile-info-icon{
+				display:none;
+			}
+		.info-wrap.active{z-index:2;top:0;left:0;}
+
 		.info-wrap{
 			background-color: #000;
 			margin: 0;
@@ -171,10 +173,12 @@ margin-top:0px;}
 			height:100%;
 			display:block;
 			padding:0px;
-			position:fixed;
 			top:0px;
 			right:0px;
-			z-index:-2;
+			z-index:0;
+			position:absolute;
+			top:-9999;left:-9999;
+
 		}
 		
 		.info-wrap h3{

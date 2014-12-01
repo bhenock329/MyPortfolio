@@ -4,7 +4,10 @@
 /*  COLUMN SETUP  */
 .col {display: block;float:left;margin: 1% 0 1% 1.6%;}
 .col:first-child {margin-left: 0; }
-
+@font-face {
+	font-family: jaapokki;
+	src: url('../font/jaapokki-regular.ttf');
+}
 
 
 /*  GROUPING  */
@@ -47,13 +50,25 @@
 	.span_1_of_12 {width: 32.26%;}
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 600px) {
 	.section {clear: both;margin: auto; width:100%; text-align:center;}
 	.col {margin: 1% 0 1% 0%;}
+	.info-icon{margin-top:80px;font-size:30px;}
+	.work-icon{margin-top:80px;font-size:30px;}
 	.logo{
-		position:absolute;
-		top:10px;left:28%;
-		}
+				background-image:url(../img/mobillogo.png);
+				display:block;
+				background-repeat: no-repeat; 
+				-webkit-background-size: cover; 
+				background-position: center center;
+				background-size: cover;	
+				width:75px;
+				height:42px;
+				margin-top:25px;
+			}
+	.common{
+		width:100%;
+	}
 	.flyout {
 		position: absolute;
 		right: 100%;
