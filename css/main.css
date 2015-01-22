@@ -2,7 +2,7 @@
 /****************************************************
 						Main Styles CSS
 ****************************************************/
-body{height:100%;margin:0 auto;background-color:#fff;}
+body{margin:0 auto;background-color:#fff;}
 
 .clear {clear:both;}
 
@@ -10,6 +10,20 @@ body{height:100%;margin:0 auto;background-color:#fff;}
 	font-family: jaapokki;
 	src: url('../font/jaapokki-regular.ttf');
 }
+button{
+	background-color:transparent;
+	padding:10px ;
+	border: solid 2px #00baff;
+	font-family: sans-serif;
+}
+	.button{color: white;
+		text-transform: uppercase;font-weight: bold;font-size:16px;}
+button:hover{
+	background-color:#00baff;
+	border: solid 2px #fff;
+}
+	.button:hover{color:#fff;}
+
 
 /****************************************************
 						Navigation
@@ -47,10 +61,10 @@ body{height:100%;margin:0 auto;background-color:#fff;}
 		.flyin-main {}
 		.main-wrap {
 			width:100%;
-			height:100%;
+			overflow:hidden;
 			margin:0;
 			padding:0;
-			z-index: -1;
+			z-index: -2;
 		}
 
 		.background-img{
@@ -72,7 +86,7 @@ body{height:100%;margin:0 auto;background-color:#fff;}
 			left: 0;
 			width: 100%;
 			height: 100%;
-			z-index: 0;
+			z-index: -1;
 			background-color: rgba(0,0,0,0.2); /*dim the background*/
 		}
 
@@ -94,11 +108,22 @@ body{height:100%;margin:0 auto;background-color:#fff;}
 			}
 
 		.work-wrap.active{z-index:2;top:0;left:0;}
-		.work-wrap.work-active-over-info{z-index:3;top:0;left:0;}
+		.inactive{display:none;}
+		.animated {  -webkit-animation-duration: .1s; animation-duration: .1s; -webkit-animation-fill-mode: both; animation-fill-mode: both; -webkit-animation-timing-function: linear; animation-timing-function: linear; } 
+			@-webkit-keyframes fadeInRightBig { 
+			    0% { opacity: 1; -webkit-transform: translateX(2000px); } 
+			    100% { opacity: 1; -webkit-transform: translateX(0); } 
+			} 
+			@keyframes fadeInRightBig { 
+			    0% {opacity: 1;transform: translateX(2000px); } 
+			    100% {opacity: 1; transform: translateX(0); } 
+			} 
+		.fadeInRightBig { -webkit-animation-name: fadeInRightBig; animation-name: fadeInRightBig; }
+
 		.work-wrap{
-			background-color: black;
+			background-color: #000;
+			font-family: arial;
 			margin: 0;
-			margin-top:130px;
 			width: 100%;
 			height:100%;
 			display:block;
@@ -107,14 +132,14 @@ body{height:100%;margin:0 auto;background-color:#fff;}
 			right:0px;
 			z-index:0;
 			position:absolute;
-			top:-9999;right:9999;
+			right:9999;
 		}
 		.work-head{
 			background-color: #000;
 			width:100%;
-			height:100px;
-			margin-top: 135px;
+			margin-top: 130px;
 			margin-right: 0px;
+			overflow:hidden;
 		}
 		.work-quote {
 			width:80%;
@@ -127,12 +152,15 @@ body{height:100%;margin:0 auto;background-color:#fff;}
 
 		}
 		.work-gallery{
+			background-color: #000;
 			width:100%;
+			height:100%;
+			overflow:hidden;
 		}
 		.common{
 			float: left;
 			width:33.3%;
-			height:300px;
+			height:200px;
 			margin: 0;
 			padding:0;
 			background-repeat: no-repeat; 
@@ -141,14 +169,14 @@ body{height:100%;margin:0 auto;background-color:#fff;}
 			background-size: cover; 
 			background-position: center center;
 		}
-		.common:hover{opacity: 0.5;background-color: #0076a3;}
+		.common:hover{opacity: 0.5;}
 			.gallery-img-1{background-image: url(../img/shop_featured_big.png);}
 			.gallery-img-2{background-image: url(../img/samsung-business-logo.png);}
 			.gallery-img-3{background-image: url(../img/shop_featured_big.png);}
 		
-
+		
 		/****************************************
-						WORK PAGE
+						INFO PAGE
 		****************************************/
 		.info-icon{
 			margin-top:10px;
@@ -165,9 +193,41 @@ body{height:100%;margin:0 auto;background-color:#fff;}
 				display:none;
 			}
 		.info-wrap.active{z-index:2;top:0;left:0;}
+		.animated { 
+		    -webkit-animation-duration: .1s; 
+		    animation-duration: .1s; 
+		    -webkit-animation-fill-mode: both; 
+		    animation-fill-mode: both; 
+		    -webkit-animation-timing-function: linear; 
+		    animation-timing-function: linear; 
+		} 
 
+		@-webkit-keyframes fadeInLeftBig { 
+		    0% { 
+		        opacity: 1; 
+		        -webkit-transform: translateX(-2000px); 
+		    } 
+		    100% { 
+		        opacity: 1; 
+		        -webkit-transform: translateX(0); 
+		    } 
+		} 
+		@keyframes fadeInLeftBig { 
+		    0% { 
+		        opacity: 1; 
+		        transform: translateX(-2000px); 
+		    } 
+		    100% { 
+		        opacity: 1; 
+		        transform: translateX(0); 
+		    } 
+		} 
+		.fadeInLeftBig { 
+		    -webkit-animation-name: fadeInLeftBig; 
+		    animation-name: fadeInLeftBig; 
+		}
 		.info-wrap{
-			background-color: #000;
+			font-family: arial;
 			margin: 0;
 			width: 100%;
 			height:100%;
@@ -177,32 +237,121 @@ body{height:100%;margin:0 auto;background-color:#fff;}
 			right:0px;
 			z-index:0;
 			position:absolute;
-			top:-9999;left:-9999;
+			left:-9999;
+		}
+			.info-wrap h2{
 
-		}
-		
-		.info-wrap h3{
-			padding-left:20px;
-		}
-		.info-wrap p{
-			padding-right:20px;
-		}
-		.info-head{
-			color:#fff;
-			background-color: orange;
-			width:100%;
-			height:250px;
-			margin-top: 125px;
-		}
-		.info-section-social{
-			color:#fff;
-			background-color: black;
-			width:100%;
-			height:400px;
-		}
-		.info-section-resume{
-			color:#000;
-			background-color: white;
-			width:100%;
-			height:400px;
-		}
+				padding-left:20px;
+			}
+			.info-wrap h3{
+				margin:5 0 0 0px;
+				padding-left:20px;
+			}
+			.info-wrap h4{
+				margin:0px;
+				padding-left:20px;font-style:italic;
+			}
+			.info-wrap p{
+				padding-right:20px;
+			}
+			
+			.info-wrap ul{
+				margin: 0px;
+			}
+			.info-wrap ul li{
+				padding-right:20px;
+				padding-top: 10px;
+			}
+			.info-head{
+				color:#fff;
+				background-image:url(../img/scratched-texture.jpg);
+				width:100%;
+				overflow:hidden;
+				margin-top: 125px;
+			}
+			.about-me{
+				float:left;
+				width:100%;
+			}
+				.about-me h2{
+					margin:90 0 0 20px; 
+					padding:0px;
+
+				}
+			
+			.info-section-resume{
+				color:white;
+				width:100%;
+				overflow:hidden;
+				}
+				.resume-header{
+					background-image:url(../img/industry-recognition-bkg.png);
+					overflow:hidden;
+				}
+				.resume-header h2{color:#00baff;}
+				
+				.resume-header button{
+					float: right;
+					margin-top: 10px;
+					margin-right:20px;
+					color:#00baff;
+				}
+				.resume-companies{
+					background-image:url(../img/industry-recognition-bkg.png);
+					width:100%;
+					padding:25 0;
+					overflow:hidden;
+					text-align: center;
+				}
+				.skills{
+					background-color:black;
+					overflow:hidden;
+					padding:0px;
+				}
+					.skills-content {
+						text-align: center;
+						margin:0 20px;
+					}
+					.skills-content i{
+						padding:15 0px;
+					}
+					.skills-content h4{
+						padding-left:0px;
+					}
+					.skills-content p{
+						padding:0px;
+					}
+				
+				.work-dates{font-size:16px;}
+				.barbarian-hero{
+					color:#000;
+					float: left;
+					padding:0;
+					width:100%;
+					background-color:#fff;
+					background-repeat: no-repeat; 
+					-webkit-background-size: cover; 
+					background-position: center center;
+					background-size: cover; 
+					background-position: center center;
+				}
+				.soicialterminals{
+					color:#000;
+					float: left;
+					padding:0;
+					width:100%;
+					background-color:#fff;
+					background-repeat: no-repeat; 
+					-webkit-background-size: cover; 
+					background-position: center center;
+					background-size: cover; 
+					background-position: center center;
+				}
+			.info-section-social{
+				color:#000;
+				background-color: white;
+				width:100%;
+				height:100%;
+				overflow:hidden;
+			}
+			

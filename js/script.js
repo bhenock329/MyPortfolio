@@ -1,4 +1,4 @@
-$ (document).ready(function(){
+$ (function(){
 
   /**************************************************** 
             Fixed Header 
@@ -17,40 +17,41 @@ $ (document).ready(function(){
   /**************************************************** 
   					Page Flyouts
   ****************************************************/
-        
-        /*******************************************
-                      WORK FLYOUT
-        *******************************************/
-        $(function() {
-          $('.work-icon').on('click', function() {
-            $('.work-wrap').toggleClass("active");
-          });
-          $('.logo').on('click', function() {
-            $('.work-wrap').removeClass('active');
-          });
-          $('.work-icon').on('click', function() {
-            $('.work-wrap.active').slideToggle('.active slow');
-          });
-        });
-        $(function() {
-          $('.work-icon').on('click', function() {
-            $('.work-wrap.active').slideToggle('.active slow');
-          });
-        });
-     
-
         /*******************************************
                       NFO FLYOUT
         *******************************************/
-        $(function() {
-          $('.info-icon').on('click', function() {
-            $('.info-wrap').toggleClass("active");
+        var $info = $('.info-icon');
+        var $work = $('.work-icon');
+        var $logo = $('.logo');
+
+          $info.on('click', function() {
+            $('.info-wrap').toggleClass("active animated fadeInLeftBig");
+           
+            $('.info-wrap').css({
+              'display': 'block',
+              'position' : 'absolute',
+              'right' : '-9999px'
+            });
           });
-        });
-         
-        $(function() {
-          $('.logo').on('click', function() {
-            $('.info-wrap').removeClass('active');
+          $logo.on('click', function() {
+            $('.info-wrap').removeClass('active animated fadeInLeftBig');
           });
-        });
+        /*******************************************
+                      WORK FLYOUT
+        *******************************************/
+  
+          $work.on('click', function() {
+            $('.work-wrap').toggleClass("active animated fadeInRightBig");
+           
+            $('.work-wrap').css({
+              'display': 'block',
+              'position' : 'absolute',
+              'right' : '9999px'
+            });
+          });
+          $logo.on('click', function() {
+            $('.work-wrap').removeClass('active animated fadeInRightBig');
+          });
+        
+       
 });

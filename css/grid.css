@@ -35,7 +35,7 @@
 
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 600px) {
 	.span_12_of_12 {width: 100%;}
 	.span_11_of_12 {width: 32.26%;}
 	.span_10_of_12 {width: 32.26%;}
@@ -53,10 +53,13 @@
 @media only screen and (max-width: 600px) {
 	.section {clear: both;margin: auto; width:100%; text-align:center;}
 	.col {margin: 1% 0 1% 0%;}
-	.info-icon{margin-top:80px;font-size:30px;}
-	.work-icon{margin-top:80px;font-size:30px;}
-	.logo{
-				background-image:url(../img/mobillogo.png);
+	.fixedheader{
+			height:100px;
+		}
+		.info-icon{margin-top:25px;font-size:30px;}
+		.work-icon{margin-top:25px;font-size:30px; text-align: center;}
+		.logo{
+				background-image:url(../img/mobilelogo.png);
 				display:block;
 				background-repeat: no-repeat; 
 				-webkit-background-size: cover; 
@@ -65,7 +68,21 @@
 				width:75px;
 				height:42px;
 				margin-top:25px;
-			}
+				}
+		.background-img{
+			margin-top:90px;
+		}
+		.work-head{
+			margin-top: 100px;
+		}
+		.info-head{
+			margin-top: 100px;
+		}	
+			.about-me h2{
+					margin:25 0 0 20px; 
+					padding:0px;
+
+				}	
 	.common{
 		width:100%;
 	}
@@ -73,4 +90,48 @@
 		position: absolute;
 		right: 100%;
 		}
+	
+	.info-wrap h3{
+			margin:25 20 0 0px;
+			padding-left:20px;
+		}
+	.info-wrap ul:last-child {
+			margin: 0 0 20 0px;
+		}
 		
+	.info-wrap ul li{
+			margin-right:20px;
+		}
+	.about-me{}
+		.about-me h2{
+			margin:20 10 0 0px;
+		}
+		.about-me .span_4_of_12 {
+			width: 100%;
+			padding:0 20px;
+			margin:0;
+		}
+	.resume-header .span_6_of_12{
+		width:100%;
+	}
+		.res_text{display:none;}
+		.res_button{ text-align:center;}
+		.resume-header button{
+			float:none;
+			margin-right:0px;
+		}
+
+	.resume-content .span_6_of_12 {
+		width: 100%;
+		padding:0 20px;
+		margin:0;
+	}
+	.resume-companies .span_3_of_12 {
+		width: 50%;
+		padding:0px;
+		margin:auto;
+	}
+	.skills .span_4_of_12 {
+			width: 100%;
+			margin:0;
+		}
